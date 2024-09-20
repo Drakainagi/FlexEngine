@@ -129,7 +129,6 @@ namespace FlexEngine
       glUniform1i(glGetUniformLocation(asset_shader.Get(), "bloomTexture"), 1);
       glUniform1f(glGetUniformLocation(asset_shader.Get(), "gamma"), gamma);
       asset_shader = FLX_ASSET_GET(Asset::Shader, R"(/shaders/GaussianBlur)");
-      auto& temp = FLX_ASSET_GET(Asset::Shader, R"(/shaders/finalComposite)");
       asset_shader.Use();
       glUniform1i(glGetUniformLocation(asset_shader.Get(), "screenTexture"), 0);
 
